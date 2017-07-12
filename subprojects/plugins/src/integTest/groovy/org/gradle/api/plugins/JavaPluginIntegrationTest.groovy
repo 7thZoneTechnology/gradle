@@ -56,7 +56,8 @@ class JavaPluginIntegrationTest extends AbstractIntegrationSpec {
             public class Main {}
         """
         when:
-        executer.expectDeprecationWarning()
+        // TODO:SG Should we check for deprecation warning here?
+        // executer.expectDeprecationWarning()
         succeeds("assemble")
         then:
         file("build/classes/java/main").assertDoesNotExist()

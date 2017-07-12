@@ -27,7 +27,8 @@ class CommandLineJavaCompilerForExecutableIntegrationTest extends JavaCompilerIn
 
     def setup() {
         executer.beforeExecute {
-            expectDeprecationWarning()
+            // TODO:SW Should we be checking for a deprecation warning here?
+            // expectDeprecationWarning()
         }
     }
 
